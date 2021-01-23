@@ -10,38 +10,20 @@
 }
 
 
-
-#Page
+body
 {
  font-family: Raleway;
- margin-left: 10%;
- margin-right: 10%;
+ margin-left: 5%;
+ margin-right: 5%;
 
 }
 
-#Titre
+header h1
 {
     color:#0065FC;
     font-style: italic;
+    
 }
-header h2
-
-{
-    position: absolute;
-    left: 10%;
-    top:8%;
-}
-header h3
-
-{
-    position: absolute;
-    left: 10%;
-    top: 13%;
-    font-weight: lighter;
-}
-
-
-
 
 nav ul
 {
@@ -77,7 +59,10 @@ nav a:hover
     color: blue;
 }
 
-
+.recherche
+{
+    display: flex;
+}
 
 #logo
 {
@@ -87,10 +72,12 @@ nav a:hover
     border-bottom-left-radius: 10px;
     color: black;
      height: 10px;
-     padding: 1%
+     padding: 10px;
+     
      
     
 }
+
 button
 {
     color: white;
@@ -100,14 +87,16 @@ button
     border-bottom-right-radius: 10px;
     height: 30px;        
 }
-#Filtres
+
+.filtres
 {
     display: Flex;
     font-size: 1.1em;
+    flex-wrap: nowrap;
           
 }
 
-#Filtres .fas
+.filtres .fas
 {
     position: relative;
     top: 0%;
@@ -118,12 +107,14 @@ button
 .fas 
 {
     color: #0065FC;
-  
+     
 }
 
-#Animaux, #Eco, #Fam, #Rom
-{   display: flex;
-    flex-wrap: nowrap;
+
+
+.filtres p
+{   
+  
     border:2px rgb(217, 217, 217) solid;
     border-radius: 30px;
     margin-left: 10px;
@@ -131,22 +122,23 @@ button
    text-align: justify;   
 }
 
-#Animaux:hover, #Eco:hover, #Fam:hover, #Rom:hover
+.filtres p:hover
 {
-    border:1px grey solid;
-    border-radius: 10px;
+    border:2px rgb(217, 217, 217) solid;
+    border-radius: 30px;
     margin-left: 10px;
-    padding: 2px;
+    padding-right: 1%; 
     color:blue;
     font-weight: bold;
 
 }
 
-#Filtres i
+.filtres i
 {   
-      color:#0065FC;
-          border-radius: 30px;
-   padding: 8px;
+    color:#0065FC;
+    border-radius: 30px;
+   padding: 9px;
+   background-color:rgb(222, 235,255);
   
    
     
@@ -158,7 +150,7 @@ button
     color: #0065FC;
 }
 
-#hebergement 
+.hebergement 
 {
    width: 80%;
    background-color: #F2F2F2;
@@ -170,7 +162,7 @@ button
    padding: 2%;
 }
 
-#hebergement div
+.hebergement div
 {
     background-color: white;
     border: 0px white solid;
@@ -182,14 +174,14 @@ button
     
 }
 
-#hebergement img
+.hebergement img
 
 {   
     Margin-top: -5%;
     padding-left: 2%;
     padding-right: 2%;
     box-sizing: border-box;
-             border: 0px white solid;
+     border: 0px white solid;
     border-radius: 10px;
     width: 230px;
     height: 114px;
@@ -202,17 +194,17 @@ button
     color:blue;
 }
 
-#Section
+.Section
 {
     display: flex;
 }
 
-#hebergement h3
+.hebergement h3
 {
     width:100%;
 }
 
-#populaires
+.populaires
 {  display: flex;
    flex-direction: column;
    width: 35%;
@@ -223,7 +215,7 @@ button
 
 }
 
-#populaires div
+.populaires div
 {
     background-color: white;
     border: 2px white solid;
@@ -231,13 +223,11 @@ button
     margin-right: 1%;
     margin-bottom: 3%;
     padding-left: 1%;
-    padding-bottom: 1%;
-    
-   
-    
+   padding-bottom: 1%;    
+       
 }
 
-#populaires img
+.populaires img
 {
     margin-top: -5%;
     border: 0px white solid;
@@ -246,63 +236,102 @@ button
     width: 133px;
     height: 126px;
     float: left;
-   
-    
+      
 }
 
 
-#activité
+.activité
 {
-    
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-right: 5%;
-    padding: 2%;
-    align-content: space-between;
-    text-align: start;
-        
+     text-align: start;
+       
+         
 }
 
+.grille
 
-#activité img
+{  
+    display: grid;
+    grid-template-columns: [colonne1] 1fr [colonne2] 1fr [colonne3] 1fr  [colonne4] 1fr;
+    grid-template-rows: [ligne1]1fr  [ligne2] 1fr;
+    
+         
+
+}
+.vieuxport
 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
    
-    border: 0px white solid;
-    border-radius: 10px;
-    margin-top: -15px;   
-      box-sizing: border-box; 
-    
-    
 }
 
-#activité h3
+
+.callanques
+{
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+.frioul
+
+{
+    grid-column-start: 2;
+    grid-row-start:2;
+}
+
+.notre_dame
+{
+    grid-column-start: 4;
+    grid-row-start: 1;
+}
+
+.longchamps
+{
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+
+.activité h3
 {
     width:100%;
 }
 
-#activité div
+.activité figcaption
+{
+    font-weight: bold;
+    padding: 3%;
+  }
+
+.activité figure
 {  
-    background-color: rgb(248,248,248);
-     border: 0px white solid;
-    border-radius: 10px;
-    margin-right: 1%;
-    margin-bottom: 3%;
-        
+    box-shadow: 3px 3px 4px 2px rgb(244,244,244);
+    border: 1px rgb(244,244,244) solid;
+    background-color: white;
+    border-radius: 10px;          
+            
 }
 
+.activité img
+{
+   
+    border: 0px white solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+           
+}
 
 .fort img, .frioul img, .notre_dame img, .longchamps img
-
 {
-    width: 304px;
-    height: 134px;
+    width: 265px;
+    height: 130px;
+   
 }
 
 .vieuxport img, .callanques img
-
 {
-    width: 300px;
+    width: 265px;
     height: 385px;
 }
 
@@ -322,6 +351,7 @@ footer
 footer ul
 {
     list-style-type: none;
+    
   
    
 }
