@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@0,wght@0,100;0,400;0,700;0,900;1&display=swap');
 body {
     font-family: 'Raleway', sans-serif;
+}
+
+.page {
     margin-left: 2%;
     margin-right: 2%;
 }
@@ -10,28 +13,56 @@ header img {
     width: 120px;
 }
 
-nav ul {
+header p,
+h2 {
+    line-height: 0.75;
+}
+
+header h2 {
+    font-weight: bold;
+}
+
+header ul {
     list-style-type: none;
     display: flex;
     text-decoration: none;
     margin-right: 3px;
     text-align: end;
+    position: absolute;
+    right: 7%;
+    top: 2%;
 }
 
-nav a {
+header ul li a {
     margin-right: 15px;
-    color: black;
     text-decoration: none;
-    padding-bottom: 3px;
+    color: black;
 }
 
-nav a:hover {
-    text-decoration: overline;
+header ul a:hover {
+    border-top: 1px blue solid;
     color: blue;
+    padding-top: 20px;
+}
+
+header li:nth-child(3) {
+    font-weight: 700;
 }
 
 .recherche {
     display: flex;
+    height: 40px;
+}
+
+.recherche input {
+    border: 1px #F2F2F2 solid;
+    height: 40px;
+}
+
+ ::placeholder {
+    color: black;
+    opacity: 1;
+    font-weight: bolder;
 }
 
 #logo {
@@ -40,17 +71,17 @@ nav a:hover {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     color: black;
-    height: 10px;
+    height: 18px;
     padding: 11px;
 }
 
 button {
     color: white;
-    background-color: blue;
-    border: 1px blue solid;
+    background-color: #0065FC;
+    border: 1px #0065FC;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    height: 32px;
+    height: 40px;
 }
 
 .filtres {
@@ -64,7 +95,11 @@ button {
     position: relative;
     top: 0%;
     left: -2%;
-    background-color: rgb(222, 235, 255)
+    background-color: rgb(222, 235, 255);
+}
+
+.filtres h4 {
+    padding: 0.5%;
 }
 
 .fas {
@@ -72,11 +107,13 @@ button {
 }
 
 .filtres p {
+    display: flex;
     border: 2px rgb(217, 217, 217) solid;
     border-radius: 30px;
     margin-left: 10px;
     padding-right: 1%;
     text-align: justify;
+    line-height: 2.5;
 }
 
 .filtres p:hover {
@@ -89,24 +126,45 @@ button {
 }
 
 .filtres i {
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+    border-radius: 50%;
     color: #0065FC;
-    border-radius: 30px;
-    padding: 9px;
-    background-color: rgb(222, 235, 255);
+    width: 20px;
+    height: 20px;
 }
 
-#star {
+.ligne {
+    display: flex;
+    line-height: 2;
+}
+
+.ligne i {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
     color: #0065FC;
+    width: 10px;
+    height: 10px;
+    border: 1px rgb(217, 217, 217) solid;
+    margin-right: 10px;
+}
+
+.section {
+    display: flex;
 }
 
 #hebergement {
     width: 80%;
-    height: min-content;
     background-color: #F2F2F2;
     border: 3px #F2F2F2 solid;
     border-radius: 10px;
     margin-right: 5%;
-    padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 20px;
+    padding: 1%;
 }
 
 #hebergement ul {
@@ -115,6 +173,7 @@ button {
     justify-content: space-between;
     margin: 0%;
     padding: 0%;
+    line-height: 1.6;
 }
 
 #hebergement ul li {
@@ -122,17 +181,17 @@ button {
     background-color: white;
     border: 0px white solid;
     border-radius: 10px;
-    margin-bottom: 3%;
     width: 30%;
+    margin-bottom: 1%;
+    padding: 5px;
 }
 
 #hebergement img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    width: 98%;
+    width: 100%;
     height: 18vh;
     object-fit: cover;
-    padding: 1%;
 }
 
 #hebergement ul li p {
@@ -141,11 +200,10 @@ button {
 }
 
 .fa-star {
-    color: blue;
-}
-
-.Section {
-    display: flex;
+    color: #0065FC;
+    height: 12px;
+    width: 12px;
+    padding: 1%;
 }
 
 #hebergement h3 {
@@ -159,6 +217,8 @@ button {
     border: 0px #F2F2F2 solid;
     border-radius: 10px;
     padding: 2%;
+    margin-top: 2%;
+    margin-bottom: 20px;
     height: min-content;
 }
 
@@ -173,20 +233,20 @@ button {
 .populaires ul li {
     list-style: none;
     background-color: white;
-    border: 2px white solid;
     border-radius: 10px;
     height: 140px;
     margin-bottom: 8%;
+    padding: 5px;
 }
 
 .populaires img {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     width: 133px;
-    height: 18vh;
+    height: 140px;
     object-fit: cover;
     float: left;
-    padding: 1%;
+    padding-right: 4%;
 }
 
 .populaires ul li p {
@@ -195,7 +255,7 @@ button {
 }
 
 .populaires ul li .fa-star {
-    padding-top: 5%;
+    padding-top: 7%;
 }
 
 .populaires h3 {
@@ -203,100 +263,96 @@ button {
     margin-top: 0%;
 }
 
-#activité {
-    text-align: start;
-}
-
-.grille {
+.activite {
     display: grid;
-    /* grid-template-columns: [colonne1] 1fr [colonne2] 1fr [colonne3] 1fr [colonne4] 1fr; */
-    grid-template-columns: repeat(4, 25%);
-    column-gap: 30px;
-    row-gap: 30px;
-    grid-template-rows: repeat(10, 3vh);
-    padding-bottom: 3%;
+    grid-template-columns: repeat(4, 23.6%);
+    grid-template-rows: repeat(10, 5vh);
+    column-gap: 28px;
+    row-gap: 28px;
+    padding-bottom: 2%;
 }
 
-.grille figure {
-    margin: 0;
+.activite ul {
+    display: contents;
 }
 
-.grille figure img {
+.activite figure {
     width: 100%;
     height: 100%;
+    margin: 0%;
 }
 
-.vieuxport {
+.activite figcaption {
+    font-weight: bold;
+    padding: 3%;
+    padding-left: 10%;
+}
+
+.activite ul li {
+    list-style: none;
+    margin: 0%;
+    height: 100%;
+    border-radius: 5%;
+    box-shadow: 0px 5px 5px 2px rgb(244, 244, 244);
+}
+
+.activite li img {
+    width: 100%;
+    height: calc(100% - 40px);
+    object-fit: cover;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+.activite li:nth-child(1) {
     grid-column-start: 1;
     grid-row-start: 1;
-    grid-row-end: span 10;
+    grid-row-end: 10;
 }
 
-.fort {
+.activite li:nth-child(2) {
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: span 6;
 }
 
-.frioul {
+.activite li:nth-child(3) {
     grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: span 10;
+    grid-row-start: 7;
+    grid-row-end: 10;
 }
 
-.callanques {
+.activite li:nth-child(4) {
     grid-column-start: 3;
     grid-row-start: 1;
-    grid-row-end: span 10;
+    grid-row-end: 10;
 }
 
-.notre_dame {
+.activite li:nth-child(5) {
     grid-column-start: 4;
     grid-row-start: 1;
     grid-row-end: 5;
 }
 
-.longchamps {
+.activite li:nth-child(6) {
     grid-column-start: 4;
     grid-row-start: 5;
-    grid-row-end: span 10;
+    grid-row-end: 10;
 }
 
-#activité h3 {
+.activite h3 {
     width: 100%;
 }
 
-#activité figcaption {
-    font-weight: bold;
-    padding: 3%;
-}
-
-#activité figure {
-    box-shadow: 3px 3px 4px 2px rgb(244, 244, 244);
-    border-radius: 5%;
-    background-color: white;
-}
-
-#activité img {
-    border: 0px white solid;
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
-    object-fit: cover;
-}
-
-#graph {
-    margin-left: 4%;
-}
-
 footer {
-    position: static;
-    bottom: 3%;
     display: flex;
     background-color: #F2F2F2;
+    width: 100%;
 }
 
 footer ul {
     list-style-type: none;
+    line-height: 2;
 }
 
 footer section {
@@ -304,40 +360,55 @@ footer section {
 }
 
 @media only screen and (max-width: 480px) {
-    body {
-        margin: 0%;
+    .page {
+        width: 97%;
+        margin: auto;
     }
-    body .Section {
+    body .section {
         display: flex;
         flex-direction: column-reverse;
     }
-    header {
-        position: relative;
+    header h2 {
+        font-size: 1.3em;
+        line-height: 1;
+        padding-top: 2%;
     }
     header ul {
         width: 100%;
-        margin: 0%;
-        padding: 0;
-        text-align: center;
+        margin-top: 10%;
+        margin-left: 2%;
+        position: absolute;
+        top: 4%;
+        left: auto;
+    }
+    header ul a:hover {
+        text-decoration: underline;
+        color: blue;
     }
     header ul li {
         flex: 1;
     }
     header ul li:last-child {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: -155%;
+        right: -3%;
+        font-weight: bold;
+        color: #0065FC;
     }
     .filtres {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        font-size: 1em;
     }
-    .filtres h3 {
+    .filtres h4 {
         width: 100%;
+        margin-top: 3%;
     }
     .filtres p {
         margin-top: 0%;
+        margin-left: 0%;
+        margin-right: 3%;
     }
     .populaires {
         width: 100%;
@@ -357,187 +428,85 @@ footer section {
         padding-right: 1%;
         border-radius: 10%;
         box-shadow: 3px 3px 4px 2px rgb(244, 244, 244);
-    }
-    .grille {
-        display: grid;
-        grid-template-columns: [colonne1] 1fr;
-        grid-template-rows: [ligne1] 1fr [ligne2] 1fr [ligne3] 1fr [ligne4] 1fr [ligne5] 1fr [ligne6] 1fr;
-    }
-    .vieuxport {
-        grid-column-start: 1;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    .fort {
-        grid-column-start: 1;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-    .frioul {
-        grid-column-start: 1;
-        grid-row-start: 3;
-        grid-row-end: 4;
-    }
-    .callanques {
-        grid-column-start: 1;
-        grid-row-start: 4;
-        grid-row-end: 5
-    }
-    .notre_dame {
-        grid-column-start: 1;
-        grid-row-start: 5;
-    }
-    .longchamps {
-        grid-column-start: 1;
-        grid-row-start: 6;
-    }
-    .fort img,
-    .frioul img,
-    .notre_dame img,
-    .longchamps img,
-    .vieuxport img,
-    .callanques img {
-        width: 100%;
-        height: 130px;
-    }
-    #activité figcaption {
-        font-weight: bold;
-    }
-    #activité img {
-        border: 0px white solid;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-    footer {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        background-color: #F2F2F2;
-    }
-    footer section {
-        width: 100%;
-        margin: 0%;
-        padding: 0%;
-    }
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
-    body {
-        margin: 0%;
-    }
-    body .Section {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    header ul {
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    .nav {
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    .filtres {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .filtres h3 {
-        width: 100%;
-    }
-    .filtres p {
-        margin-top: 0%;
-    }
-    .populaires {
-        width: 100%;
-        margin-bottom: 2%;
+        margin-top: 3%;
     }
     .populaires img {
-        width: 200px;
-        height: 180px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 133px;
+        height: 130px;
+        object-fit: cover;
+        float: left;
+        padding: 1%;
     }
-    #hebergement {
-        width: 60%;
-        box-sizing: border-box;
-        background-color: rgb(253, 253, 253);
-        border: none;
-        margin-left: 20%
+    .populaires ul li .fa-star {
+        padding-top: 5%;
+        position: relative;
+        bottom: 15%;
     }
-    #hebergement ul li {
-        width: 100%;
-        padding-top: 2%;
-        padding-left: 1%;
-        padding-right: 1%;
-        border-radius: 10%;
-        box-shadow: 3px 3px 4px 2px rgb(244, 244, 244);
-    }
-    .grille {
-        display: grid;
+    .activite {
         grid-template-columns: [colonne1] 1fr;
-        grid-template-rows: [ligne1] 1fr [ligne2] 1fr [ligne3] 1fr [ligne4] 1fr [ligne5] 1fr [ligne6] 1fr;
+        grid-template-rows: [ligne1] 1fr [ligne2] 1fr [ligne3] 1fr [ligne4] 1fr [ligne5] 1fr [ligne6] 1fr [ligne7] 1fr;
+        row-gap: 2%;
+        padding-bottom: 0%;
     }
-    .vieuxport {
+    .activite li:nth-child(1) {
         grid-column-start: 1;
         grid-row-start: 1;
         grid-row-end: 2;
     }
-    .fort {
+    .activite li:nth-child(2) {
         grid-column-start: 1;
         grid-row-start: 2;
         grid-row-end: 3;
     }
-    .frioul {
+    .activite li:nth-child(3) {
         grid-column-start: 1;
         grid-row-start: 3;
         grid-row-end: 4;
     }
-    .callanques {
+    .activite li:nth-child(4) {
         grid-column-start: 1;
         grid-row-start: 4;
         grid-row-end: 5
     }
-    .notre_dame {
+    .activite li:nth-child(5) {
         grid-column-start: 1;
         grid-row-start: 5;
+        grid-row-end: 6;
     }
-    .longchamps {
+    .activite li:nth-child(6) {
         grid-column-start: 1;
         grid-row-start: 6;
+        grid-row-end: 7;
     }
-    .fort img,
-    .frioul img,
-    .notre_dame img,
-    .longchamps img,
-    .vieuxport img,
-    .callanques img {
-        width: 100%;
-        height: 130px;
-    }
-    #activité figcaption {
+    .activite figcaption {
         font-weight: bold;
     }
-    #activité img {
-        border: 0px white solid;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+    .activite img {
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
+        object-fit: cover;
+        box-shadow: 3px 3px 4px 2px rgb(244, 244, 244);
+        height: 190px;
     }
     footer {
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
         background-color: #F2F2F2;
+        width: 100%;
+        margin-top: 0%;
+        position: relative;
+        bottom: 30%;
     }
     footer section {
         width: 100%;
-        margin: 0%;
-        padding: 0%;
     }
 }
 
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+@media only screen and (max-device-width: 1024px) {
     nav a {
         margin-right: 15px;
-        color: black;
         text-decoration: none;
         padding-bottom: 3px;
     }
@@ -548,10 +517,14 @@ footer section {
     #hebergement div {
         margin-right: 3%;
     }
-    .grille {
-        display: grid;
-        grid-template-columns: [colonne1] 1fr [colonne2] 1fr [colonne3] 1fr [colonne4] 1fr;
-        grid-template-rows: [ligne1]1fr [ligne2] 1fr;
+    .populaires {
+        display: flex;
+        flex-direction: column;
+        background-color: #F2F2F2;
+        border: 0px #F2F2F2 solid;
+        border-radius: 10px;
+        padding-bottom: 5%;
+        height: min-content;
     }
     .vieuxport {
         grid-column-start: 1;
@@ -581,27 +554,18 @@ footer section {
         grid-column-start: 4;
         grid-row-start: 2;
     }
-    #activité img {
+    .activite img {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+        box-shadow: 3px 3px 4px 2px rgb(244, 244, 244);
         object-fit: cover;
     }
-    .frioul img {
-        width: 170px;
-        height: 140px;
+    footer {
+        background-color: #F2F2F2;
+        width: 100%;
+        margin-top: 15%;
     }
-    .notre_dame img {
-        width: 170px;
-        height: 135px;
-    }
-    .fort img,
-    .longchamps img {
-        width: 170px;
-        height: 140px;
-    }
-    .vieuxport img,
-    .callanques img {
-        width: 185px;
-        height: 350px;
+    footer section {
+        width: 100%;
     }
 }
