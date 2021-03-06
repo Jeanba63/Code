@@ -37,16 +37,17 @@ header ul li a {
     margin-right: 15px;
     text-decoration: none;
     color: black;
+    padding: 27px 20px 5px;
 }
 
 header ul a:hover {
-    border-top: 1px blue solid;
+    border-top: 2px blue solid;
     color: blue;
-    padding-top: 20px;
 }
 
-header li:nth-child(3) {
+header ul li:last-child a {
     font-weight: 700;
+    color: blue;
 }
 
 .recherche {
@@ -82,28 +83,19 @@ button {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     height: 40px;
+    padding-left: 10px;
+    padding-right: 20px;
 }
 
 .filtres {
     display: Flex;
     font-size: 1.1em;
     flex-wrap: nowrap;
-    font-weight: bold;
-}
-
-.filtres .fas {
-    position: relative;
-    top: 0%;
-    left: -2%;
-    background-color: rgb(222, 235, 255);
+    font-weight: 700;
 }
 
 .filtres h4 {
     padding: 0.5%;
-}
-
-.fas {
-    color: #0065FC;
 }
 
 .filtres p {
@@ -111,9 +103,9 @@ button {
     border: 2px rgb(217, 217, 217) solid;
     border-radius: 30px;
     margin-left: 10px;
-    padding-right: 1%;
     text-align: justify;
-    line-height: 2.5;
+    align-items: center;
+    padding-right: 20px;
 }
 
 .filtres p:hover {
@@ -133,6 +125,11 @@ button {
     color: #0065FC;
     width: 20px;
     height: 20px;
+    align-items: center;
+    position: relative;
+    top: 0%;
+    left: -2%;
+    background-color: rgb(222, 235, 255);
 }
 
 .ligne {
@@ -150,6 +147,7 @@ button {
     height: 10px;
     border: 1px rgb(217, 217, 217) solid;
     margin-right: 10px;
+    align-items: center;
 }
 
 .section {
@@ -162,7 +160,6 @@ button {
     border: 3px #F2F2F2 solid;
     border-radius: 10px;
     margin-right: 5%;
-    margin-top: 2%;
     margin-bottom: 20px;
     padding: 1%;
 }
@@ -217,7 +214,6 @@ button {
     border: 0px #F2F2F2 solid;
     border-radius: 10px;
     padding: 2%;
-    margin-top: 2%;
     margin-bottom: 20px;
     height: min-content;
 }
@@ -261,6 +257,11 @@ button {
 .populaires h3 {
     width: 100%;
     margin-top: 0%;
+    padding-left: 2%;
+}
+
+.populaires ul h3 #graph {
+    padding-left: 120px;
 }
 
 .activite {
